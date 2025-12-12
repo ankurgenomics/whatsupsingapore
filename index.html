@@ -553,18 +553,79 @@
 
     <script>
         // Event data with schema.org markup for AI
-        const EVENTS = [
-            { id: 1, title: "Christmas Wonderland", date: "06 Dec ‐ 28 Dec", category: "christmas", price: 15, venue: "Gardens by the Bay", description: "Singapore's largest yuletide festival", link: "https://www.gardensbythebay.com.sg", emoji: "🎄", featured: true },
-            { id: 2, title: "Marina Bay Countdown", date: "31 Dec", category: "festivals", price: 0, venue: "Marina Bay", description: "Biggest New Year celebration", link: "https://www.marinabay.sg", emoji: "🎆", featured: true },
-            { id: 3, title: "Light to Night Festival", date: "17 Jan ‐ 06 Feb", category: "arts", price: 0, venue: "Civic District", description: "70+ light projections", link: "https://www.nationalgallery.sg", emoji: "💡", featured: true },
-            { id: 4, title: "Singapore Cat Festival", date: "13 Dec ‐ 14 Dec", category: "family", price: 0, venue: "Suntec", description: "Cat lovers paradise", link: "https://www.cws.org.sg", emoji: "🐱", featured: true },
-            { id: 5, title: "Doja Cat Concert", date: "December 2025", category: "concerts", price: 150, venue: "National Stadium", description: "Grammy-winning artist", link: "https://www.livenation.sg", emoji: "🎤" },
-            { id: 6, title: "Super Junior", date: "02 Jan", category: "concerts", price: 180, venue: "Indoor Stadium", description: "K-pop legends", link: "https://ticketmaster.sg", emoji: "🎵" },
-            { id: 7, title: "Beauty and the Beast", date: "Until 25 Jan", category: "arts", price: 78, venue: "MBS Theatre", description: "Disney musical", link: "https://www.marinabaysands.com", emoji: "🎭" },
-            { id: 8, title: "Singapore Zoo", date: "Daily", category: "family", price: 45, venue: "Mandai", description: "2,800+ animals", link: "https://www.mandai.com", emoji: "🦁" },
-            { id: 9, title: "Night Safari", date: "Daily 7PM", category: "family", price: 49, venue: "Mandai", description: "Nocturnal zoo", link: "https://www.mandai.com", emoji: "🌙" },
-            { id: 10, title: "Universal Studios", date: "Daily", category: "family", price: 82, venue: "Sentosa", description: "Theme park", link: "https://www.rwsentosa.com", emoji: "🎢" }
-        ];
+        // ============================================
+// LOAD EVENTS FROM JSON (AUTO-UPDATED DAILY)
+// ============================================
+
+let EVENTS = [];
+let allEvents = [];
+let currentEvents = [];
+let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+let preferences = JSON.parse(localStorage.getItem('preferences') || '[]');
+
+// Load events when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔄 Loading events from JSON...');
+    
+    const eventsGrid = document.getElementById('eventsGrid');
+    const featuredGrid = document.getElementById('featuredGrid');
+    
+    // Show loading message
+    if (eventsGrid) {
+        eventsGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:3rem;color:#7F8C8D;font-size:1.2rem;">⏳ Loading fresh events...</p>';
+    }
+    
+    // Fetch events from JSON file
+    fetch('events.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load events');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(`✅ SUCCESS! Loaded ${data.length} events from JSON`);
+            
+            // Set the events
+            EVENTS = data;
+            allEvents = [...EVENTS];
+            currentEvents = [...EVENTS];
+            
+            // Display everything
+            displayFeatured();
+            displayEvents(currentEvents);
+            updateBadges();
+            
+            // Update event counter
+            const eventCount = document.getElementById('eventCount');
+            if (eventCount) {
+                eventCount.textContent = `${EVENTS.length} events`;
+            }
+            
+            console.log('🎉 Events loaded and displayed!');
+        })
+        .catch(error => {
+            console.error('❌ ERROR loading events:', error);
+            if (eventsGrid) {
+                eventsGrid.innerHTML = `
+                    <div style="grid-column:1/-1;text-align:center;padding:3rem;">
+                        <p style="color:#E94B3C;font-size:1.2rem;margin-bottom:1rem;">⚠️ Failed to load events</p>
+                        <p style="color:#7F8C8D;">Please refresh the page or try again later.</p>
+                        <button onclick="location.reload()" style="margin-top:1rem;padding:0.8rem 2rem;background:#E94B3C;color:white;border:none;border-radius:8px;cursor:pointer;font-size:1rem;">🔄 Refresh Page</button>
+                    </div>
+                `;
+            }
+        });
+});
+```
+
+---
+
+## 🎯 STEP 7: Find and Remove Duplicate Code
+
+#### **1. Search for "let favorites"**
+Press `Ctrl+F` (or `Cmd+F`) and search for:
+```
 
         let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
         let preferences = JSON.parse(localStorage.getItem('preferences') || '[]');
