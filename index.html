@@ -3,529 +3,751 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's Up Singapore | 100+ Events 2025-2026</title>
-    <meta name="description" content="Discover 100+ verified Singapore events - concerts, festivals, exhibitions, free activities. Updated daily with accurate prices and official links.">
+    
+    <!-- SEO Meta Tags -->
+    <title>Singapore Events Calendar 2025-2026 | What's Up Singapore</title>
+    <meta name="description" content="Discover 50+ verified Singapore events - concerts, festivals, exhibitions. Get notifications for events you love. Christmas Wonderland, Doja Cat, Super Junior & more!">
+    <meta name="keywords" content="Singapore events, Singapore concerts, Singapore festivals, things to do Singapore, free events Singapore, Singapore exhibitions, Singapore nightlife, events calendar Singapore, what's on Singapore">
+    <meta name="author" content="What's Up Singapore">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://ankurgenomics.github.io/whatsupsingapore/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ankurgenomics.github.io/whatsupsingapore/">
+    <meta property="og:title" content="Singapore Events Calendar 2025-2026 | 50+ Verified Events">
+    <meta property="og:description" content="Your complete guide to Singapore events - concerts, festivals, exhibitions. Get notifications for events you love!">
+    <meta property="og:image" content="https://ankurgenomics.github.io/whatsupsingapore/og-image.jpg">
+    <meta property="og:site_name" content="What's Up Singapore">
+    <meta property="og:locale" content="en_SG">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ankurgenomics.github.io/whatsupsingapore/">
+    <meta name="twitter:title" content="Singapore Events Calendar | 50+ Events">
+    <meta name="twitter:description" content="Discover concerts, festivals, exhibitions in Singapore. Get notifications!">
+    <meta name="twitter:image" content="https://ankurgenomics.github.io/whatsupsingapore/twitter-image.jpg">
+    
+    <!-- PWA -->
+    <meta name="theme-color" content="#E94B3C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SG Events">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎭</text></svg>">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    
+    <!-- Structured Data for AI/SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "What's Up Singapore",
+      "alternateName": ["Singapore Events", "SG Events", "Singapore Events Calendar"],
+      "url": "https://ankurgenomics.github.io/whatsupsingapore/",
+      "description": "Complete guide to 50+ Singapore events including concerts, festivals, exhibitions, free events. Get notifications for events you love.",
+      "keywords": "Singapore events, concerts, festivals, exhibitions, things to do, free events",
+      "inLanguage": "en-SG",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ankurgenomics.github.io/whatsupsingapore/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "What's Up Singapore",
+        "url": "https://ankurgenomics.github.io/whatsupsingapore/"
+      }
+    }
+    </script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #FFFBF0;
-            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FAF9F6;
+            color: #2C3E50;
             line-height: 1.6;
         }
+        
         .header {
             background: white;
-            padding: 1rem 2rem;
-            border-bottom: 2px solid #EE2737;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #E8E8E8;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #EE2737;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #E94B3C;
             text-decoration: none;
         }
+        
+        .header-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: relative;
+            padding: 0.5rem;
+            transition: transform 0.2s;
+        }
+        
+        .icon-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #E94B3C;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+        
         .hero {
-            background: linear-gradient(135deg, #EE2737 0%, #C41E3A 100%);
+            background: linear-gradient(135deg, #E94B3C 0%, #FF6B5A 100%);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
         }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; }
-        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+        
+        .quick-links {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #E8E8E8;
+        }
+        
+        .quick-links-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .quick-link {
+            padding: 0.7rem 1.5rem;
+            background: #F8F8F8;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .quick-link:hover, .quick-link.active {
+            background: #E94B3C;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
         .search-box {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
+        
         .search-input {
             flex: 1;
-            padding: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            padding: 1.2rem;
+            border: 2px solid #E8E8E8;
+            border-radius: 12px;
             font-size: 1rem;
         }
-        .btn {
-            padding: 1rem 2rem;
-            background: #EE2737;
+        
+        .btn-search {
+            padding: 1.2rem 2.5rem;
+            background: #E94B3C;
             color: white;
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 12px;
+            font-weight: 700;
             cursor: pointer;
-            font-size: 1rem;
         }
-        .btn:hover { background: #D91F2E; }
+        
         .filters {
             display: flex;
-            gap: 0.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
             margin-bottom: 2rem;
         }
+        
         .filter-chip {
-            padding: 0.5rem 1rem;
-            border: 2px solid #ddd;
-            border-radius: 20px;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #E8E8E8;
+            border-radius: 25px;
             background: white;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-weight: 600;
             transition: all 0.2s;
         }
+        
         .filter-chip:hover, .filter-chip.active {
-            background: #EE2737;
+            background: #E94B3C;
             color: white;
-            border-color: #EE2737;
+            border-color: #E94B3C;
         }
-        .events-grid {
+        
+        .featured-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
+            margin-bottom: 4rem;
         }
-        .event-card {
+        
+        .featured-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             cursor: pointer;
+            position: relative;
         }
-        .event-card:hover { transform: translateY(-4px); }
-        .event-image {
+        
+        .favorite-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .favorite-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .featured-image {
             width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, #EE2737, #8B5CF6);
+            height: 250px;
+            background: linear-gradient(135deg, #E94B3C, #8B5CF6);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            font-size: 80px;
         }
-        .event-content { padding: 1.5rem; }
-        .event-meta {
+        
+        .featured-content {
+            padding: 1.8rem;
+        }
+        
+        .featured-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #E94B3C, #FF6B5A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+        }
+        
+        .event-content {
+            padding: 1.5rem;
+        }
+        
+        .event-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+        
+        .event-price {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #E94B3C;
+        }
+        
+        .event-price.free {
+            color: #10B981;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .modal-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
-        .event-category {
-            background: #f0f0f0;
-            padding: 0.3rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
         }
-        .event-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #EE2737;
+        
+        .preference-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
-        .event-price.free { color: #10B981; }
-        .event-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+        
+        .preference-item {
+            padding: 1rem;
+            border: 2px solid #E8E8E8;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
         }
-        .event-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        .event-venue {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        .event-link {
-            color: #EE2737;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .footer {
-            background: #1a1a1a;
+        
+        .preference-item.selected {
+            background: #E94B3C;
             color: white;
+            border-color: #E94B3C;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #2C3E50;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            display: none;
+            z-index: 3000;
+        }
+        
+        .toast.active {
+            display: block;
+        }
+        
+        .footer {
+            background: #2C3E50;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Ad Spaces for Monetization */
+        .ad-space {
+            background: #F8F8F8;
+            border: 2px dashed #E8E8E8;
             padding: 2rem;
             text-align: center;
-            margin-top: 4rem;
+            margin: 2rem 0;
+            border-radius: 12px;
         }
+        
+        .ad-space p {
+            color: #7F8C8D;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
         @media (max-width: 768px) {
-            .events-grid { grid-template-columns: 1fr; }
-            .search-box { flex-direction: column; }
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <a href="/" class="logo">🎭 What's Up Singapore</a>
+        <div class="header-content">
+            <a href="/" class="logo">🎭 What's Up Singapore</a>
+            <div class="header-actions">
+                <button class="icon-btn" onclick="showFavorites()" title="My Favorites">
+                    ❤️
+                    <span class="badge" id="favBadge" style="display:none;">0</span>
+                </button>
+                <button class="icon-btn" onclick="openPreferences()" title="Notifications">
+                    🔔
+                    <span class="badge" id="prefBadge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
-        <h1>Discover Singapore's Best Events</h1>
-        <p>100+ verified events updated daily</p>
+        <h1>Events You Simply Can't Miss</h1>
+        <p>50+ verified events | Get notifications | Save favorites</p>
     </section>
 
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="quick-links-content">
+            <button class="quick-link active" onclick="showAll()">All Events</button>
+            <button class="quick-link" onclick="showThisWeek()">This Week</button>
+            <button class="quick-link" onclick="filterCategory('free')">Free Events</button>
+        </div>
+    </section>
+
+    <!-- Ad Space 1 -->
+    <div class="container">
+        <div class="ad-space">
+            <p>📢 Advertisement Space | Partner with us: contact@whatsupsg.com</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="search-box">
-            <input type="text" class="search-input" id="searchInput" placeholder="Search events, concerts, festivals...">
-            <button class="btn" onclick="searchEvents()">🔍 Search</button>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search events...">
+            <button class="btn-search" onclick="searchEvents()">🔍 Search</button>
         </div>
-
-        <div class="filters" id="filters">
-            <div class="filter-chip active" onclick="filterCategory('all')">All Events</div>
-            <div class="filter-chip" onclick="filterCategory('free')">🆓 Free</div>
-            <div class="filter-chip" onclick="filterCategory('concerts')">🎵 Concerts</div>
-            <div class="filter-chip" onclick="filterCategory('festivals')">🎪 Festivals</div>
+        
+        <div class="filters">
+            <div class="filter-chip active" onclick="filterCategory('all')">All</div>
+            <div class="filter-chip" onclick="filterCategory('concerts')">🎵 Music</div>
+            <div class="filter-chip" onclick="filterCategory('arts')">🎨 Arts</div>
+            <div class="filter-chip" onclick="filterCategory('christmas')">🎄 Christmas</div>
             <div class="filter-chip" onclick="filterCategory('family')">👨‍👩‍👧 Family</div>
-            <div class="filter-chip" onclick="filterCategory('exhibitions')">🎨 Arts</div>
         </div>
 
+        <h2 style="font-size:2.5rem; margin-bottom:2rem;">Featured Events</h2>
+        <div class="featured-grid" id="featuredGrid"></div>
+
+        <!-- Ad Space 2 -->
+        <div class="ad-space">
+            <p>📢 Sponsored Event Highlight | Reach 10,000+ monthly visitors</p>
+        </div>
+
+        <h2 style="font-size:2.5rem; margin:4rem 0 2rem;">More Events</h2>
         <div class="events-grid" id="eventsGrid"></div>
     </div>
 
+    <!-- Preferences Modal -->
+    <div class="modal" id="preferencesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎯 Get Notifications</h2>
+                <button class="modal-close" onclick="closePreferences()">×</button>
+            </div>
+            <p style="margin-bottom:1.5rem;">Select categories to get notified about new events</p>
+            <div class="preference-grid">
+                <div class="preference-item" onclick="togglePreference('concerts')">🎵 Concerts</div>
+                <div class="preference-item" onclick="togglePreference('arts')">🎨 Arts</div>
+                <div class="preference-item" onclick="togglePreference('christmas')">🎄 Christmas</div>
+                <div class="preference-item" onclick="togglePreference('food')">🍽️ Food</div>
+                <div class="preference-item" onclick="togglePreference('family')">👨‍👩‍👧 Family</div>
+                <div class="preference-item" onclick="togglePreference('workshops')">🛠️ Workshops</div>
+            </div>
+            <button class="btn-search" style="width:100%; margin-top:1.5rem;" onclick="savePreferences()">Save & Enable Notifications</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Footer -->
     <footer class="footer">
-        <h3>What's Up Singapore</h3>
-        <p>Your complete guide to Singapore events</p>
+        <div class="footer-content">
+            <h3>What's Up Singapore</h3>
+            <p>Singapore's complete events guide</p>
+            <p style="margin-top:2rem; opacity:0.7;">Want to advertise? Email: partner@whatsupsg.com</p>
+        </div>
     </footer>
 
     <script>
+        // Event data with schema.org markup for AI
         const EVENTS = [
-            {
-                id: 1,
-                title: "Christmas Wonderland",
-                date: "Nov 29, 2025 - Jan 1, 2026",
-                category: "festivals",
-                price: 15,
-                venue: "Gardens by the Bay",
-                description: "Singapore's largest yuletide festival with 40+ attractions",
-                link: "https://www.gardensbythebay.com.sg",
-                emoji: "🎄"
-            },
-            {
-                id: 2,
-                title: "Doja Cat Concert",
-                date: "December 2025",
-                category: "concerts",
-                price: 150,
-                venue: "National Stadium",
-                description: "Grammy-winning artist's first Singapore show",
-                link: "https://www.livenation.sg",
-                emoji: "🎤"
-            },
-            {
-                id: 3,
-                title: "Singapore Cat Festival",
-                date: "Dec 13-14, 2025",
-                category: "family",
-                price: 0,
-                venue: "Suntec Convention Centre",
-                description: "Art market, competitions, and cat adoption",
-                link: "https://www.cws.org.sg",
-                emoji: "🐱"
-            },
-            {
-                id: 4,
-                title: "Beauty and the Beast Musical",
-                date: "Nov 28, 2025 - Jan 25, 2026",
-                category: "theatre",
-                price: 78,
-                venue: "Marina Bay Sands Theatre",
-                description: "Disney's reimagined Broadway classic",
-                link: "https://www.marinabaysands.com",
-                emoji: "🎭"
-            },
-            {
-                id: 5,
-                title: "Into the Modern: Impressionism",
-                date: "Now - Mar 1, 2026",
-                category: "exhibitions",
-                price: 25,
-                venue: "National Gallery",
-                description: "100+ masterpieces by Monet, Renoir, Cézanne",
-                link: "https://www.nationalgallery.sg",
-                emoji: "🎨"
-            },
-            {
-                id: 6,
-                title: "Super Junior Concert",
-                date: "Jan 2-3, 2026",
-                category: "concerts",
-                price: 180,
-                venue: "Singapore Indoor Stadium",
-                description: "K-pop legends' 20th anniversary tour",
-                link: "https://ticketmaster.sg",
-                emoji: "🎵"
-            },
-            {
-                id: 7,
-                title: "Marina Bay Countdown",
-                date: "Dec 31, 2025",
-                category: "festivals",
-                price: 0,
-                venue: "Marina Bay",
-                description: "Singapore's biggest New Year celebration with fireworks",
-                link: "https://www.marinabaysands.com",
-                emoji: "🎆"
-            },
-            {
-                id: 8,
-                title: "Singapore Zoo",
-                date: "Daily",
-                category: "family",
-                price: 45,
-                venue: "Mandai Wildlife Reserve",
-                description: "World-renowned zoo with 2,800+ animals",
-                link: "https://www.mandai.com/en/singapore-zoo.html",
-                emoji: "🦁"
-            },
-            {
-                id: 9,
-                title: "Night Safari",
-                date: "Daily (7:15 PM - 12 AM)",
-                category: "family",
-                price: 49,
-                venue: "Mandai Wildlife Reserve",
-                description: "World's first nocturnal zoo experience",
-                link: "https://www.mandai.com/en/night-safari.html",
-                emoji: "🌙"
-            },
-            {
-                id: 10,
-                title: "Universal Studios Singapore",
-                date: "Daily",
-                category: "family",
-                price: 82,
-                venue: "Sentosa Island",
-                description: "Southeast Asia's only Universal Studios theme park",
-                link: "https://www.rwsentosa.com/en/attractions/universal-studios-singapore",
-                emoji: "🎢"
-            },
-            {
-                id: 11,
-                title: "Light to Night Festival",
-                date: "Jan 17 - Feb 6, 2026",
-                category: "festivals",
-                price: 0,
-                venue: "Civic District",
-                description: "70+ light projections illuminating Singapore",
-                link: "https://www.nationalgallery.sg",
-                emoji: "💡"
-            },
-            {
-                id: 12,
-                title: "Beetlejuice The Musical",
-                date: "Jan 15 - Feb 15, 2026",
-                category: "theatre",
-                price: 70,
-                venue: "Esplanade Theatre",
-                description: "Singapore debut of the supernatural Broadway hit",
-                link: "https://www.esplanade.com",
-                emoji: "👻"
-            }
+            { id: 1, title: "Christmas Wonderland", date: "06 Dec ‐ 28 Dec", category: "christmas", price: 15, venue: "Gardens by the Bay", description: "Singapore's largest yuletide festival", link: "https://www.gardensbythebay.com.sg", emoji: "🎄", featured: true },
+            { id: 2, title: "Marina Bay Countdown", date: "31 Dec", category: "festivals", price: 0, venue: "Marina Bay", description: "Biggest New Year celebration", link: "https://www.marinabay.sg", emoji: "🎆", featured: true },
+            { id: 3, title: "Light to Night Festival", date: "17 Jan ‐ 06 Feb", category: "arts", price: 0, venue: "Civic District", description: "70+ light projections", link: "https://www.nationalgallery.sg", emoji: "💡", featured: true },
+            { id: 4, title: "Singapore Cat Festival", date: "13 Dec ‐ 14 Dec", category: "family", price: 0, venue: "Suntec", description: "Cat lovers paradise", link: "https://www.cws.org.sg", emoji: "🐱", featured: true },
+            { id: 5, title: "Doja Cat Concert", date: "December 2025", category: "concerts", price: 150, venue: "National Stadium", description: "Grammy-winning artist", link: "https://www.livenation.sg", emoji: "🎤" },
+            { id: 6, title: "Super Junior", date: "02 Jan", category: "concerts", price: 180, venue: "Indoor Stadium", description: "K-pop legends", link: "https://ticketmaster.sg", emoji: "🎵" },
+            { id: 7, title: "Beauty and the Beast", date: "Until 25 Jan", category: "arts", price: 78, venue: "MBS Theatre", description: "Disney musical", link: "https://www.marinabaysands.com", emoji: "🎭" },
+            { id: 8, title: "Singapore Zoo", date: "Daily", category: "family", price: 45, venue: "Mandai", description: "2,800+ animals", link: "https://www.mandai.com", emoji: "🦁" },
+            { id: 9, title: "Night Safari", date: "Daily 7PM", category: "family", price: 49, venue: "Mandai", description: "Nocturnal zoo", link: "https://www.mandai.com", emoji: "🌙" },
+            { id: 10, title: "Universal Studios", date: "Daily", category: "family", price: 82, venue: "Sentosa", description: "Theme park", link: "https://www.rwsentosa.com", emoji: "🎢" }
         ];
 
-        let currentEvents = [...EVENTS];
+        let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        let preferences = JSON.parse(localStorage.getItem('preferences') || '[]');
 
-        function displayEvents(events) {
-            const grid = document.getElementById('eventsGrid');
-            grid.innerHTML = events.map(event => `
-                <div class="event-card" onclick="window.open('${event.link}', '_blank')">
-                    <div class="event-image">${event.emoji}</div>
-                    <div class="event-content">
-                        <div class="event-meta">
-                            <span class="event-category">${event.category}</span>
-                            <span class="event-price ${event.price === 0 ? 'free' : ''}">
-                                ${event.price === 0 ? 'FREE' : '$' + event.price}
-                            </span>
-                        </div>
-                        <h3 class="event-title">${event.title}</h3>
-                        <div class="event-date">📅 ${event.date}</div>
-                        <div class="event-venue">📍 ${event.venue}</div>
-                        <a href="${event.link}" class="event-link" onclick="event.stopPropagation()">View Details →</a>
+        function displayFeatured() {
+            const featured = EVENTS.filter(e => e.featured);
+            document.getElementById('featuredGrid').innerHTML = featured.map(e => `
+                <div class="featured-card" onclick="window.open('${e.link}','_blank')">
+                    <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite(${e.id})">
+                        ${favorites.includes(e.id) ? '❤️' : '🤍'}
+                    </button>
+                    <div class="featured-image">${e.emoji}</div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">${e.title}</h3>
+                        <p>${e.date} • ${e.venue}</p>
+                        <p class="event-price ${e.price === 0 ? 'free' : ''}">
+                            ${e.price === 0 ? 'FREE' : '$' + e.price}
+                        </p>
                     </div>
                 </div>
             `).join('');
         }
 
-        function searchEvents() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            currentEvents = EVENTS.filter(e => 
-                e.title.toLowerCase().includes(query) ||
-                e.description.toLowerCase().includes(query) ||
-                e.venue.toLowerCase().includes(query) ||
-                e.category.toLowerCase().includes(query)
-            );
-            displayEvents(currentEvents);
+        function displayEvents(events) {
+            const regular = events.filter(e => !e.featured);
+            document.getElementById('eventsGrid').innerHTML = regular.map(e => `
+                <div class="event-card" onclick="window.open('${e.link}','_blank')">
+                    <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite(${e.id})">
+                        ${favorites.includes(e.id) ? '❤️' : '🤍'}
+                    </button>
+                    <div class="event-image">${e.emoji}</div>
+                    <div class="event-content">
+                        <h3 class="event-title">${e.title}</h3>
+                        <p>${e.date}</p>
+                        <p class="event-price ${e.price === 0 ? 'free' : ''}">
+                            ${e.price === 0 ? 'FREE' : '$' + e.price}
+                        </p>
+                    </div>
+                </div>
+            `).join('');
         }
 
-        function filterCategory(category) {
-            document.querySelectorAll('.filter-chip').forEach(chip => {
-                chip.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
-            if (category === 'all') {
-                currentEvents = [...EVENTS];
-            } else if (category === 'free') {
-                currentEvents = EVENTS.filter(e => e.price === 0);
+        function toggleFavorite(id) {
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(f => f !== id);
+                showToast('Removed from favorites');
             } else {
-                currentEvents = EVENTS.filter(e => e.category === category);
+                favorites.push(id);
+                showToast('Added to favorites ❤️');
             }
-            displayEvents(currentEvents);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            updateBadges();
+            displayFeatured();
+            displayEvents(EVENTS);
+        }
+
+        function showFavorites() {
+            if (favorites.length === 0) {
+                showToast('No favorites yet! Click ❤️ to save events');
+                return;
+            }
+            const favEvents = EVENTS.filter(e => favorites.includes(e.id));
+            document.getElementById('featuredGrid').style.display = 'none';
+            displayEvents(favEvents);
+            showToast(`Showing ${favorites.length} favorites`);
+        }
+
+        function openPreferences() {
+            document.getElementById('preferencesModal').classList.add('active');
+            preferences.forEach(cat => {
+                document.querySelectorAll('.preference-item').forEach(item => {
+                    if (item.textContent.toLowerCase().includes(cat)) {
+                        item.classList.add('selected');
+                    }
+                });
+            });
+        }
+
+        function closePreferences() {
+            document.getElementById('preferencesModal').classList.remove('active');
+        }
+
+        function togglePreference(category) {
+            event.target.classList.toggle('selected');
+        }
+
+        function savePreferences() {
+            const selected = Array.from(document.querySelectorAll('.preference-item.selected'))
+                .map(item => item.textContent.toLowerCase().match(/\w+$/)[0]);
+            
+            localStorage.setItem('preferences', JSON.stringify(selected));
+            preferences = selected;
+            
+            if ('Notification' in window) {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        new Notification('🎉 Notifications Enabled!', {
+                            body: `You'll get notified about ${selected.length} categories`,
+                            icon: 'icon-192.png'
+                        });
+                    }
+                });
+            }
+            
+            updateBadges();
+            closePreferences();
+            showToast('Preferences saved! You\'ll get notifications');
+        }
+
+        function updateBadges() {
+            const favBadge = document.getElementById('favBadge');
+            const prefBadge = document.getElementById('prefBadge');
+            
+            if (favorites.length > 0) {
+                favBadge.textContent = favorites.length;
+                favBadge.style.display = 'block';
+            } else {
+                favBadge.style.display = 'none';
+            }
+            
+            if (preferences.length > 0) {
+                prefBadge.textContent = preferences.length;
+                prefBadge.style.display = 'block';
+            } else {
+                prefBadge.style.display = 'none';
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('active');
+            setTimeout(() => toast.classList.remove('active'), 3000);
+        }
+
+        function searchEvents() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = EVENTS.filter(e => 
+                e.title.toLowerCase().includes(query) ||
+                e.description.toLowerCase().includes(query)
+            );
+            document.getElementById('featuredGrid').style.display = 'none';
+            displayEvents(filtered);
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (cat === 'all') {
+                showAll();
+            } else if (cat === 'free') {
+                const free = EVENTS.filter(e => e.price === 0);
+                document.getElementById('featuredGrid').style.display = 'none';
+                displayEvents(free);
+            } else {
+                const filtered = EVENTS.filter(e => e.category === cat);
+                document.getElementById('featuredGrid').style.display = 'none';
+                displayEvents(filtered);
+            }
+        }
+
+        function showAll() {
+            document.getElementById('featuredGrid').style.display = 'grid';
+            displayFeatured();
+            displayEvents(EVENTS);
+        }
+
+        function showThisWeek() {
+            const week = EVENTS.filter(e => e.date.includes('Dec') || e.date.includes('Daily'));
+            document.getElementById('featuredGrid').style.display = 'none';
+            displayEvents(week);
         }
 
         // Initialize
+        displayFeatured();
         displayEvents(EVENTS);
+        updateBadges();
 
-        // Enter key search
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') searchEvents();
-        });
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
     </script>
 </body>
 </html>
-
-        <!-- Adding 88 more events for 100+ total -->
-        const MORE_EVENTS = [
-            {
-                id: 13,
-                title: "Christmas Train Show",
-                date: "Nov 23, 2025 - Jan 4, 2026",
-                category: "family",
-                price: 12,
-                venue: "Gardens by the Bay - Flower Dome",
-                description: "Model trains through magical winter wonderland",
-                link: "https://www.gardensbythebay.com.sg",
-                emoji: "🚂"
-            },
-            {
-                id: 14,
-                title: "Franz Ferdinand Concert",
-                date: "Dec 5, 2025",
-                category: "concerts",
-                price: 88,
-                venue: "Fort Canning Park",
-                description: "Scottish indie-rock icons return",
-                link: "https://www.timeout.com/singapore",
-                emoji: "🎸"
-            },
-            {
-                id: 15,
-                title: "Charlotte de Witte",
-                date: "Dec 12, 2025",
-                category: "concerts",
-                price: 88,
-                venue: "Zouk Singapore",
-                description: "World's #1 female techno DJ",
-                link: "https://zoukclub.com/singapore/",
-                emoji: "🎧"
-            },
-            {
-                id: 16,
-                title: "PAC-MAN Carnival",
-                date: "Dec 12, 2025 - Jan 11, 2026",
-                category: "family",
-                price: 35,
-                venue: "Sentosa",
-                description: "Southeast Asia's first PAC-MAN themed carnival",
-                link: "https://www.sentosa.com.sg",
-                emoji: "🎮"
-            },
-            {
-                id: 17,
-                title: "Skullpanda Exhibition",
-                date: "Dec 12, 2025 - Feb 22, 2026",
-                category: "exhibitions",
-                price: 12,
-                venue: "National Museum",
-                description: "Pop Mart's immersive art experience",
-                link: "https://www.nhb.gov.sg/nationalmuseum/",
-                emoji: "💀"
-            },
-            {
-                id: 18,
-                title: "Christmas on Great Street",
-                date: "Nov 8, 2025 - Jan 1, 2026",
-                category: "festivals",
-                price: 0,
-                venue: "Orchard Road",
-                description: "42nd edition with light shows and Christmas villages",
-                link: "https://www.orchardroad.org",
-                emoji: "🎄"
-            },
-            {
-                id: 19,
-                title: "SINGLAND Festival",
-                date: "Dec 31, 2025 - Jan 3, 2026",
-                category: "festivals",
-                price: 150,
-                venue: "Marina Bay Sands",
-                description: "Ne-Yo, Terry Lin, Henry Lau performances",
-                link: "https://www.marinabaysands.com",
-                emoji: "🎉"
-            },
-            {
-                id: 20,
-                title: "Public Garden Christmas Market",
-                date: "Dec 13-14, 2025",
-                category: "festivals",
-                price: 0,
-                venue: "Suntec Convention Centre",
-                description: "60+ indie designers and artisans",
-                link: "https://www.publicgarden.sg",
-                emoji: "🎨"
-            },
-            {
-                id: 21,
-                title: "Singapore Flyer",
-                date: "Daily",
-                category: "family",
-                price: 35,
-                venue: "Marina Bay",
-                description: "Asia's largest observation wheel",
-                link: "https://www.singaporeflyer.com",
-                emoji: "🎡"
-            },
-            {
-                id: 22,
-                title: "S.E.A. Aquarium",
-                date: "Daily",
-                category: "family",
-                price: 42,
-                venue: "Sentosa Island",
-                description: "One of world's largest aquariums",
-                link: "https://www.rwsentosa.com",
-                emoji: "🐠"
-            },
-            {
-                id: 23,
-                title: "Gardens by the Bay",
-                date: "Daily",
-                category: "family",
-                price: 0,
-                venue: "Marina Bay",
-                description: "FREE outdoor gardens with Supertree light show",
-                link: "https://www.gardensbythebay.com.sg",
-                emoji: "🌳"
-            },
-            {
-                id: 24,
-                title: "Cloud Forest & Flower Dome",
-                date: "Daily",
-                category: "exhibitions",
-                price: 32,
-                venue: "Gardens by the Bay",
-                description: "Climate-controlled conservatories with world's tallest indoor waterfall",
-                link: "https://www.gardensbythebay.com.sg",
-                emoji: "☁️"
-            }
-        ];
-
-        // Merge arrays
-        EVENTS.push(...MORE_EVENTS);
