@@ -1,0 +1,67 @@
+name: Auto Update Events with Gemini
+
+on:
+  schedule:
+    # Runs every day at 6 AM UTC (2 PM Singapore time)
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Adds "Run workflow" button
+
+jobs:
+  update-events:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install required libraries
+        run: |
+          pip install requests beautifulsoup4
+      
+      - name: Run Gemini event updater
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python auto_update_gemini.py
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+          git add events.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update: Fresh events $(date +%Y-%m-%d)" && git push)
+```
+
+#### **5. Commit the File**
+- Scroll down
+- In "Commit message" it should say: "Create update-events.yml"
+- Click green button: **"Commit new file"**
+
+✅ **Done! You should see: `.github/workflows/update-events.yml` in your repo**
+
+---
+
+## 🎯 STEP 5: Create Initial events.json
+
+### **What You're Doing:**
+Creating an empty events file that will be filled automatically.
+
+### **EXACT STEPS:**
+
+#### **1. Still in Your Repo**
+You should be at: https://github.com/ankurgenomics/whatsupsingapore
+
+#### **2. Click "Add file" Again**
+- Top right
+- Green button "Add file"
+- Select **"Create new file"**
+
+#### **3. Type the File Name**
+In the box that says "Name your file...", type EXACTLY:
+```
+events.json
